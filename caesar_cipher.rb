@@ -9,18 +9,18 @@ def caesar_cipher(string, shift)
     if lowercase.include?(char)
       old_index = lowercase.index(char)
       new_index = (old_index + shift) % 26
-      result << lowercase[new_index]
+      result = result + lowercase[new_index]
     elsif uppercase.include?(char)
-      old_index = lowercase.index(char)
+      old_index = uppercase.index(char)
       new_index = (old_index + shift) % 26
-      result << uppercase[new_index]
+      result = result + uppercase[new_index]
     else
-      result << char
+      result = result + char
 
     end
   end
   result
 end
 
-puts caesar_cipher('bla bla, bla!', -1)
-#end
+puts caesar_cipher('BLA bla, bla!', -1)
+# end
